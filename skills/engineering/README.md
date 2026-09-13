@@ -20,6 +20,7 @@ Reachable only when you type them (Claude Code: `disable-model-invocation: true`
 
 Model- or user-reachable (rich trigger phrasing so the model can reach for them).
 
+- **[implementation-to-formal-semantics](./implementation-to-formal-semantics/SKILL.md)**: Explain source code through invariants, a minimal abstract machine, and formal semantics, with explicit abstraction losses and source correspondence.
 - **[prototype](./prototype/SKILL.md)**: Build a throwaway prototype to answer a design question: a single shareable HTML file for state/logic, or several toggleable UI variations.
 
 - **[diagnosing-bugs](./diagnosing-bugs/SKILL.md)**: Disciplined diagnosis loop for hard bugs and performance regressions: build a feedback loop that goes red on this bug → minimise → hypothesise → instrument → fix → regression-test.
