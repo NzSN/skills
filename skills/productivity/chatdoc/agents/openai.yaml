@@ -1,3 +1,3 @@
 interface:
   display_name: "Chat Documents"
-  short_description: "Save and view Markdown/HTML chat documents"
+  short_description: "Save HTML chat documents with wslview"

@@ -1,14 +1,14 @@
 ## What it does
 
-`chatdoc` saves chat reports, explanations, reviews and chat-only plans as Markdown and HTML in your project's `.agents/chatdocs/` directory. Existing files under `docs/` stay at their original paths, even when you open them through `wslview`.
+`chatdoc` saves chat reports, explanations, reviews and chat-only plans as HTML by default in your project's `.agents/chatdocs/` directory. Existing files under `docs/` stay at their original paths, even when you open them through `wslview`.
 
-The archive keeps an index, related assets and the dates and limits of older reports. Temporary files can be cleared without losing the delivered explanation.
+Markdown is produced when explicitly requested. The archive keeps an index, related assets and the dates and limits of older reports. Temporary files can be cleared without losing the delivered explanation.
 
 ## When to reach for it
 
 Type `/chatdoc`, or it is selected automatically when a document-presentation request fits.
 
-- Ask for an answer as Markdown and HTML, opened through `wslview`.
+- Ask for an explanation opened through `wslview`, with HTML as the default output.
 - Gather earlier chat documents into a durable project archive.
 - Recover a previous explanation whose temporary copy has disappeared.
 
@@ -18,11 +18,15 @@ A project directory to hold `.agents/chatdocs/`. Opening the browser presentatio
 
 ## The archive
 
-The Markdown and browser page share a basename, with diagrams, scripts and data kept alongside them. An existing index keeps its name and structure. New archives start with `index.md` and `index.html`.
+A new report is an HTML file, with diagrams, scripts and data kept alongside it. When both Markdown and HTML are requested, their files share a basename. An existing index keeps its name and structure; new archives start with `index.html`. A Markdown index is added only when requested.
 
-Archiving earlier reports starts with an inventory of the requested scope. Distinct versions keep distinct names. Canonical designs, plans and evidence retain their repository owners; presentation copies identify their source.
+Archiving earlier reports starts with an inventory of the requested scope. Distinct versions keep distinct names. Existing Markdown reports and indexes are preserved during migration. Canonical designs, plans and evidence retain their repository owners; presentation copies identify their source.
 
 ## Common questions
+
+**Does every report need Markdown as well as HTML?**
+
+No. With no explicit format requirement, the output is HTML only, including a new archive index. Ask for Markdown, both formats or a specific filename when needed. A Markdown request with a `wslview` presentation produces both, since the viewer opens HTML.
 
 **Will it move files already under `docs/`?**
 
@@ -34,10 +38,11 @@ It looks for retained files, original conversation text and recorded data. Recon
 
 **Is the folder `agents` or `.agents`?**
 
-Use `.agents/chatdocs/` inside the project. Related assets and the Markdown/HTML index live there too.
+Use `.agents/chatdocs/` inside the project. Related assets and the archive index live there too.
 
 ## It's working if
 
+- A default presentation produces HTML without an extra Markdown companion.
 - The index reopens every delivered report from the project archive.
 - Links and interactive controls still work after a move.
 - Existing `docs/` documents remain at their original paths.

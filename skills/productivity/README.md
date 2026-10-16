@@ -16,7 +16,7 @@ Reachable only when you type them (Claude Code: `disable-model-invocation: true`
 
 Model- or user-reachable (rich trigger phrasing so the model can reach for them).
 
-- **[chatdoc](./chatdoc/SKILL.md)**: Save and present Markdown/HTML chat documents through wslview, maintaining a durable project archive in `.agents/chatdocs/` while existing `docs/` files stay in place.
+- **[chatdoc](./chatdoc/SKILL.md)**: Save and present HTML chat documents through wslview by default, with Markdown when requested, in `.agents/chatdocs/`; existing `docs/` files stay in place.
 
 - **[grilling](./grilling/SKILL.md)**: Interview the user relentlessly about a plan, decision, or idea until every branch of the design tree is resolved.
 - **[writing-for-agents](./writing-for-agents/SKILL.md)**: Writing documents for agents: skills, AGENTS.md/CLAUDE.md, and any doc an agent reaches by a pointer.
