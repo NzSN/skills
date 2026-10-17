@@ -22,4 +22,6 @@ Every `SKILL.md` is either user-invoked (`disable-model-invocation: true` plus `
 
 To (re)link every skill outside `deprecated/` and `misc/` into the local harness skill directories (`~/.claude/skills`, `~/.agents/skills`), run `scripts/link-skills.sh`. Each entry is a symlink into this repo, so a `git pull` keeps installed skills current; re-run the script after adding, removing, or renaming a skill.
 
+To install every skill into DSH's user skill directory, run `python3 scripts/install-dsh-skills.py`. DSH scans a skill root one level deep, so the script links each skill directory into `~/.dsh/skills` (following `$DSH_HOME` when set) instead of the bucket tree. Pass `--copy` for real copies, `--force` to replace existing real entries, or `--dry-run` to preview.
+
 No em-dashes anywhere in this repo's prose (`SKILL.md` files, docs, `README.md`, `CHANGELOG.md`, ADRs, changesets, code comments). Where a sentence reaches for one, rewrite it instead with a comma, colon, period, parentheses, or a conjunction, whichever the sentence actually wants; never do a blind character substitution.
